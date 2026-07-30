@@ -889,6 +889,76 @@ body.telugu-mode .comparison-feature,
 body.telugu-mode .comparison-other {
   font-family: "Noto Sans Telugu", sans-serif;
 }
+/* Bottom Join Us box */
+
+.join-us-section {
+  width: 100%;
+
+  padding:
+    clamp(20px, 4vw, 40px)
+    0
+    clamp(40px, 7vw, 80px);
+
+  text-align: center;
+}
+
+.join-us-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    clamp(12px, 2vw, 18px)
+    clamp(28px, 6vw, 55px);
+
+  background-color: #ffffff;
+
+  border: 2px solid #087b67;
+  border-radius: clamp(14px, 3vw, 22px);
+}
+
+.join-us-title {
+  margin: 0;
+
+  color: #087b67;
+
+  font-family: "Merienda", cursive;
+  font-size: clamp(1.45rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Telugu font */
+
+body.telugu-mode .join-us-title {
+  font-family: "Noto Sans Telugu", sans-serif;
+}
+/* Simple footer */
+
+.site-footer {
+  width: 100%;
+  padding: clamp(16px, 3vw, 25px) 12px;
+
+  background-color: #ffffff;
+  border-top: 1px solid rgba(8, 123, 103, 0.18);
+
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0;
+
+  color: #087b67;
+
+  font-family: "Merienda", cursive;
+  font-size: clamp(0.72rem, 2vw, 1rem);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+body.telugu-mode .footer-location {
+  font-family: "Noto Sans Telugu", sans-serif;
+}
   </style>
 </head>
 
@@ -1324,7 +1394,23 @@ body.telugu-mode .comparison-other {
   </div>
 
 </section>
+<!-- Bottom Join Us box -->
+<section class="join-us-section">
+
+  <div class="join-us-box">
+    <h2 class="join-us-title">
+      Join Us
+    </h2>
+  </div>
+
+</section>
   </main>
+<footer class="site-footer">
+  <p class="footer-text">
+    © Cezonal Solutions |
+    <span class="footer-location">Tanuku – 534211</span>
+  </p>
+</footer>
 <script>
   /* Service-card columns */
 
@@ -1493,7 +1579,13 @@ const teluguTranslations = {
     "స్థానిక వినియోగదారుల సహాయం",
 
   "Varies":
-    "యాప్‌ను బట్టి మారుతుంది"
+    "యాప్‌ను బట్టి మారుతుంది",
+    
+    "Join Us":
+  "మాతో చేరండి",
+
+  "Tanuku – 534211":
+  "తణుకు – 534211"
 };
 
 
@@ -1517,7 +1609,9 @@ const translatableElements =
       ".comparison-description",
       ".comparison-header div",
       ".comparison-feature",
-      ".comparison-other"
+      ".comparison-other",
+      ".join-us-title",
+      ".footer-location"
     ].join(",")
   );
   /* Save the original English text */
