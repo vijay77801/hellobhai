@@ -13,9 +13,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merienda:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
-    rel="stylesheet"
+ <link
+  href="https://fonts.googleapis.com/css2?family=Merienda:wght@600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
   >
 
   <style>
@@ -676,14 +677,103 @@
   font-size: clamp(0.55rem, 1vw, 0.875rem);
   font-weight: 700;
 }
+.navbar {
+  justify-content: space-between;
+  gap: clamp(8px, 2vw, 20px);
+}
+
+/* Language switch */
+
+.language-switch {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+  padding: 3px;
+
+  background-color: #e9f7f3;
+
+  border: 1px solid rgba(8, 123, 103, 0.18);
+  border-radius: 999px;
+
+  flex-shrink: 0;
+}
+
+.language-button {
+  padding:
+    clamp(5px, 1vw, 8px)
+    clamp(8px, 2vw, 14px);
+
+  color: #087b67;
+  background-color: transparent;
+
+  border: none;
+  border-radius: 999px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.65rem, 1.3vw, 0.85rem);
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.language-button.active {
+  color: #ffffff;
+  background-color: #087b67;
+}
+
+/* Telugu font */
+
+body.telugu-mode .intro-title,
+body.telugu-mode .intro-text,
+body.telugu-mode .services-title,
+body.telugu-mode .service-name,
+body.telugu-mode .small-heading,
+body.telugu-mode .section-heading h2,
+body.telugu-mode .section-description,
+body.telugu-mode .step-card h3,
+body.telugu-mode .step-card p {
+  font-family: "Noto Sans Telugu", sans-serif;
+}
   </style>
 </head>
 
 <body>
 
-  <nav class="navbar">
-    <a href="/" class="brand">ScrubMate</a>
-  </nav>
+<nav class="navbar">
+
+  <a href="/" class="brand">
+    ScrubMate
+  </a>
+
+  <div
+    class="language-switch"
+    aria-label="Choose language"
+  >
+    <button
+      type="button"
+      class="language-button active"
+      data-lang="en"
+      aria-pressed="true"
+    >
+      English
+    </button>
+
+    <button
+      type="button"
+      class="language-button"
+      data-lang="te"
+      aria-pressed="false"
+    >
+      తెలుగు
+    </button>
+  </div>
+
+</nav>
 
   <main class="image-section">
 
@@ -974,6 +1064,8 @@
 
   </main>
 <script>
+  /* Service-card columns */
+
   const servicesGrid =
     document.querySelector(".services-grid");
 
@@ -996,6 +1088,206 @@
   window.addEventListener(
     "orientationchange",
     updateServiceColumns
+  );
+
+
+  /* English to Telugu translations */
+
+  const teluguTranslations = {
+    "Home Care Made Simple":
+      "ఇంటి సంరక్షణ ఇప్పుడు సులభం",
+
+    "Fan, refrigerator and washing-machine services":
+      "ఫ్యాన్, ఫ్రిజ్ మరియు వాషింగ్ మెషిన్ సేవలు",
+
+    "to keep your appliances clean, safe and working smoothly.":
+      "మీ పరికరాలు శుభ్రంగా, సురక్షితంగా మరియు సక్రమంగా పనిచేయడానికి.",
+
+    "Our Services":
+      "మా సేవలు",
+
+    "AC Cleaning":
+      "ఏసీ శుభ్రపరచడం",
+
+    "Bathroom Cleaning":
+      "బాత్రూమ్ శుభ్రపరచడం",
+
+    "Bedroom Cleaning":
+      "బెడ్‌రూమ్ శుభ్రపరచడం",
+
+    "Bike Cleaning":
+      "బైక్ శుభ్రపరచడం",
+
+    "Dusting Wiping":
+      "దుమ్ము తుడవడం",
+
+    "Fan Clean":
+      "ఫ్యాన్ శుభ్రపరచడం",
+
+    "Fridge Cleaning":
+      "ఫ్రిజ్ శుభ్రపరచడం",
+
+    "Full building Cleaning":
+      "పూర్తి భవనం శుభ్రపరచడం",
+
+    "Ironing Service":
+      "ఇస్త్రీ సేవ",
+
+    "Kitchen Cleaning":
+      "వంటగది శుభ్రపరచడం",
+
+    "Kitchen Help":
+      "వంటగది సహాయం",
+
+    "Mirrors Cleaning":
+      "అద్దాలు శుభ్రపరచడం",
+
+    "Packing":
+      "ప్యాకింగ్",
+
+    "Shop Cleaning":
+      "దుకాణం శుభ్రపరచడం",
+
+    "Stage Cleaning":
+      "వేదిక శుభ్రపరచడం",
+
+    "Swepping&Mopping Service":
+      "ఊడ్చడం మరియు తుడవడం సేవ",
+
+    "Utensils Cleaning":
+      "పాత్రలు శుభ్రపరచడం",
+
+    "Washing Service":
+      "బట్టలు ఉతికే సేవ",
+
+    "Simple and Convenient":
+      "సులభం మరియు సౌకర్యవంతం",
+
+    "How ScrubMate Works":
+      "ScrubMate ఎలా పనిచేస్తుంది",
+
+    "Book reliable home services in just a few simple steps.":
+      "కొన్ని సులభమైన దశల్లో నమ్మదగిన గృహ సేవలను బుక్ చేసుకోండి.",
+
+    "Choose a Service":
+      "సేవను ఎంచుకోండి",
+
+    "Select the cleaning help you need.":
+      "మీకు అవసరమైన శుభ్రపరిచే సేవను ఎంచుకోండి.",
+
+    "Book Your Time":
+      "మీ సమయాన్ని బుక్ చేయండి",
+
+    "Choose a convenient date and time.":
+      "మీకు అనుకూలమైన తేదీ మరియు సమయాన్ని ఎంచుకోండి.",
+
+    "We Get It Done":
+      "మేమే పని పూర్తి చేస్తాము",
+
+    "A trusted helper completes the work.":
+      "నమ్మకమైన సహాయకుడు పనిని పూర్తి చేస్తారు.",
+
+    "Relax and Enjoy":
+      "విశ్రాంతి తీసుకుని ఆనందించండి",
+
+    "Enjoy more free time and a beautifully clean home.":
+      "ఎక్కువ ఖాళీ సమయం మరియు అందంగా శుభ్రమైన ఇంటిని ఆస్వాదించండి."
+  };
+
+
+  /* Select all text that needs translation */
+
+  const translatableElements =
+    document.querySelectorAll(
+      [
+        ".intro-title",
+        ".intro-text span",
+        ".services-title",
+        ".service-name",
+        ".small-heading",
+        ".section-heading h2",
+        ".section-description",
+        ".step-card h3",
+        ".step-card p"
+      ].join(",")
+    );
+
+
+  /* Save the original English text */
+
+  translatableElements.forEach((element) => {
+    element.dataset.english =
+      element.textContent.trim();
+  });
+
+
+  const languageButtons =
+    document.querySelectorAll(".language-button");
+
+
+  function setLanguage(language) {
+    const isTelugu = language === "te";
+
+    document.documentElement.lang =
+      isTelugu ? "te" : "en";
+
+    document.body.classList.toggle(
+      "telugu-mode",
+      isTelugu
+    );
+
+    translatableElements.forEach((element) => {
+      const englishText =
+        element.dataset.english;
+
+      element.textContent = isTelugu
+        ? teluguTranslations[englishText] ||
+          englishText
+        : englishText;
+    });
+
+    languageButtons.forEach((button) => {
+      const isActive =
+        button.dataset.lang === language;
+
+      button.classList.toggle(
+        "active",
+        isActive
+      );
+
+      button.setAttribute(
+        "aria-pressed",
+        String(isActive)
+      );
+    });
+
+    document.title = isTelugu
+      ? "స్క్రబ్‌మేట్"
+      : "ScrubMate";
+
+    localStorage.setItem(
+      "scrubmate-language",
+      language
+    );
+  }
+
+
+  languageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+
+  /* Remember the selected language */
+
+  const savedLanguage =
+    localStorage.getItem(
+      "scrubmate-language"
+    );
+
+  setLanguage(
+    savedLanguage === "te" ? "te" : "en"
   );
 </script>
 </body>
