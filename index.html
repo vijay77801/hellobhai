@@ -739,6 +739,156 @@ body.telugu-mode .step-card h3,
 body.telugu-mode .step-card p {
   font-family: "Noto Sans Telugu", sans-serif;
 }
+/* ScrubMate comparison section */
+
+.comparison-section {
+  width: min(1050px, calc(100% - 20px));
+  margin-inline: auto;
+
+  padding:
+    clamp(35px, 6vw, 75px)
+    0
+    clamp(40px, 7vw, 85px);
+
+  font-family: "Poppins", sans-serif;
+}
+
+.comparison-heading-box {
+  width: min(700px, 100%);
+  margin:
+    0
+    auto
+    clamp(20px, 4vw, 38px);
+
+  text-align: center;
+}
+
+.comparison-label {
+  margin-bottom: 8px;
+
+  color: #087b67;
+
+  font-size: clamp(0.72rem, 1.3vw, 0.95rem);
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.comparison-heading {
+  margin-bottom: clamp(8px, 1.5vw, 14px);
+
+  color: #086b5b;
+
+  font-family: "Merienda", cursive;
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  line-height: 1.3;
+}
+
+.comparison-description {
+  color: #647874;
+
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  line-height: 1.7;
+}
+
+/* Comparison table */
+
+.comparison-table {
+  width: 100%;
+
+  overflow: hidden;
+
+  background-color: #ffffff;
+
+  border: 1px solid rgba(8, 123, 103, 0.18);
+  border-radius: clamp(14px, 2vw, 22px);
+}
+
+.comparison-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(115px, 1.5fr)
+    minmax(75px, 0.8fr)
+    minmax(75px, 0.8fr);
+
+  align-items: stretch;
+
+  border-bottom: 1px solid rgba(8, 123, 103, 0.12);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row > div {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    clamp(9px, 1.8vw, 16px)
+    clamp(4px, 1.2vw, 12px);
+
+  text-align: center;
+
+  border-right: 1px solid rgba(8, 123, 103, 0.12);
+}
+
+.comparison-row > div:last-child {
+  border-right: none;
+}
+
+.comparison-header {
+  color: #086b5b;
+  background-color: #e9f7f3;
+
+  font-size: clamp(0.67rem, 1.4vw, 0.95rem);
+  font-weight: 700;
+}
+
+.comparison-feature {
+  justify-content: flex-start !important;
+
+  color: #365f57;
+
+  font-size: clamp(0.65rem, 1.4vw, 0.95rem);
+  font-weight: 500;
+
+  text-align: left !important;
+}
+
+/* Mehendi-green tick */
+
+.comparison-tick {
+  color: #087b67;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.15rem, 3vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.comparison-other {
+  color: #778985;
+
+  font-size: clamp(0.58rem, 1.25vw, 0.85rem);
+  line-height: 1.4;
+}
+
+/* Telugu font */
+
+body.telugu-mode .comparison-label,
+body.telugu-mode .comparison-heading,
+body.telugu-mode .comparison-description,
+body.telugu-mode .comparison-header,
+body.telugu-mode .comparison-feature,
+body.telugu-mode .comparison-other {
+  font-family: "Noto Sans Telugu", sans-serif;
+}
   </style>
 </head>
 
@@ -1061,7 +1211,119 @@ body.telugu-mode .step-card p {
   </div>
 
 </section>
+<section class="comparison-section">
 
+  <div class="comparison-heading-box">
+
+    <p class="comparison-label">
+      Why Choose Us
+    </p>
+
+    <h2 class="comparison-heading">
+      ScrubMate vs Other Apps
+    </h2>
+
+    <p class="comparison-description">
+      See the important differences before choosing a home-service app.
+    </p>
+
+  </div>
+
+  <div class="comparison-table">
+
+    <div class="comparison-row comparison-header">
+      <div>Feature</div>
+      <div>ScrubMate</div>
+      <div>Other Apps</div>
+    </div>
+
+    <div class="comparison-row">
+      <div class="comparison-feature">
+        English and Telugu Support
+      </div>
+
+      <div>
+        <span class="comparison-tick">✓</span>
+      </div>
+
+      <div class="comparison-other">
+        Varies
+      </div>
+    </div>
+
+    <div class="comparison-row">
+      <div class="comparison-feature">
+        Multiple Home Services
+      </div>
+
+      <div>
+        <span class="comparison-tick">✓</span>
+      </div>
+
+      <div class="comparison-other">
+        Varies
+      </div>
+    </div>
+
+    <div class="comparison-row">
+      <div class="comparison-feature">
+        Simple Booking Process
+      </div>
+
+      <div>
+        <span class="comparison-tick">✓</span>
+      </div>
+
+      <div class="comparison-other">
+        Varies
+      </div>
+    </div>
+
+    <div class="comparison-row">
+      <div class="comparison-feature">
+        Flexible Date and Time
+      </div>
+
+      <div>
+        <span class="comparison-tick">✓</span>
+      </div>
+
+      <div class="comparison-other">
+        Varies
+      </div>
+    </div>
+
+    <div class="comparison-row">
+      <div class="comparison-feature">
+        Clear Service Information
+      </div>
+
+      <div>
+        <span class="comparison-tick">✓</span>
+      </div>
+
+      <div class="comparison-other">
+        Varies
+      </div>
+    </div>
+
+    <div class="comparison-row">
+      <div class="comparison-feature">
+        Local Customer Support
+      </div>
+
+      <div>
+        <span class="comparison-tick">✓</span>
+      </div>
+
+      <div class="comparison-other">
+        Varies
+      </div>
+    </div>
+
+  </div>
+
+</section>
   </main>
 <script>
   /* Service-card columns */
@@ -1090,129 +1352,174 @@ body.telugu-mode .step-card p {
     updateServiceColumns
   );
 
+/* English to Telugu translations */
 
-  /* English to Telugu translations */
+const teluguTranslations = {
+  "Home Care Made Simple":
+    "ఇంటి సంరక్షణ ఇప్పుడు సులభం",
 
-  const teluguTranslations = {
-    "Home Care Made Simple":
-      "ఇంటి సంరక్షణ ఇప్పుడు సులభం",
+  "Fan, refrigerator and washing-machine services":
+    "ఫ్యాన్, ఫ్రిజ్ మరియు వాషింగ్ మెషిన్ సేవలు",
 
-    "Fan, refrigerator and washing-machine services":
-      "ఫ్యాన్, ఫ్రిజ్ మరియు వాషింగ్ మెషిన్ సేవలు",
+  "to keep your appliances clean, safe and working smoothly.":
+    "మీ పరికరాలు శుభ్రంగా, సురక్షితంగా మరియు సక్రమంగా పనిచేయడానికి.",
 
-    "to keep your appliances clean, safe and working smoothly.":
-      "మీ పరికరాలు శుభ్రంగా, సురక్షితంగా మరియు సక్రమంగా పనిచేయడానికి.",
+  "Our Services":
+    "మా సేవలు",
 
-    "Our Services":
-      "మా సేవలు",
+  "AC Cleaning":
+    "ఏసీ శుభ్రపరచడం",
 
-    "AC Cleaning":
-      "ఏసీ శుభ్రపరచడం",
+  "Bathroom Cleaning":
+    "బాత్రూమ్ శుభ్రపరచడం",
 
-    "Bathroom Cleaning":
-      "బాత్రూమ్ శుభ్రపరచడం",
+  "Bedroom Cleaning":
+    "బెడ్‌రూమ్ శుభ్రపరచడం",
 
-    "Bedroom Cleaning":
-      "బెడ్‌రూమ్ శుభ్రపరచడం",
+  "Bike Cleaning":
+    "బైక్ శుభ్రపరచడం",
 
-    "Bike Cleaning":
-      "బైక్ శుభ్రపరచడం",
+  "Dusting Wiping":
+    "దుమ్ము తుడవడం",
 
-    "Dusting Wiping":
-      "దుమ్ము తుడవడం",
+  "Fan Clean":
+    "ఫ్యాన్ శుభ్రపరచడం",
 
-    "Fan Clean":
-      "ఫ్యాన్ శుభ్రపరచడం",
+  "Fridge Cleaning":
+    "ఫ్రిజ్ శుభ్రపరచడం",
 
-    "Fridge Cleaning":
-      "ఫ్రిజ్ శుభ్రపరచడం",
+  "Full building Cleaning":
+    "పూర్తి భవనం శుభ్రపరచడం",
 
-    "Full building Cleaning":
-      "పూర్తి భవనం శుభ్రపరచడం",
+  "Ironing Service":
+    "ఇస్త్రీ సేవ",
 
-    "Ironing Service":
-      "ఇస్త్రీ సేవ",
+  "Kitchen Cleaning":
+    "వంటగది శుభ్రపరచడం",
 
-    "Kitchen Cleaning":
-      "వంటగది శుభ్రపరచడం",
+  "Kitchen Help":
+    "వంటగది సహాయం",
 
-    "Kitchen Help":
-      "వంటగది సహాయం",
+  "Mirrors Cleaning":
+    "అద్దాలు శుభ్రపరచడం",
 
-    "Mirrors Cleaning":
-      "అద్దాలు శుభ్రపరచడం",
+  "Packing":
+    "ప్యాకింగ్",
 
-    "Packing":
-      "ప్యాకింగ్",
+  "Shop Cleaning":
+    "దుకాణం శుభ్రపరచడం",
 
-    "Shop Cleaning":
-      "దుకాణం శుభ్రపరచడం",
+  "Stage Cleaning":
+    "వేదిక శుభ్రపరచడం",
 
-    "Stage Cleaning":
-      "వేదిక శుభ్రపరచడం",
+  "Swepping&Mopping Service":
+    "ఊడ్చడం మరియు తుడవడం సేవ",
 
-    "Swepping&Mopping Service":
-      "ఊడ్చడం మరియు తుడవడం సేవ",
+  "Utensils Cleaning":
+    "పాత్రలు శుభ్రపరచడం",
 
-    "Utensils Cleaning":
-      "పాత్రలు శుభ్రపరచడం",
+  "Washing Service":
+    "బట్టలు ఉతికే సేవ",
 
-    "Washing Service":
-      "బట్టలు ఉతికే సేవ",
+  "Simple and Convenient":
+    "సులభం మరియు సౌకర్యవంతం",
 
-    "Simple and Convenient":
-      "సులభం మరియు సౌకర్యవంతం",
+  "How ScrubMate Works":
+    "ScrubMate ఎలా పనిచేస్తుంది",
 
-    "How ScrubMate Works":
-      "ScrubMate ఎలా పనిచేస్తుంది",
+  "Book reliable home services in just a few simple steps.":
+    "కొన్ని సులభమైన దశల్లో నమ్మదగిన గృహ సేవలను బుక్ చేసుకోండి.",
 
-    "Book reliable home services in just a few simple steps.":
-      "కొన్ని సులభమైన దశల్లో నమ్మదగిన గృహ సేవలను బుక్ చేసుకోండి.",
+  "Choose a Service":
+    "సేవను ఎంచుకోండి",
 
-    "Choose a Service":
-      "సేవను ఎంచుకోండి",
+  "Select the cleaning help you need.":
+    "మీకు అవసరమైన శుభ్రపరిచే సేవను ఎంచుకోండి.",
 
-    "Select the cleaning help you need.":
-      "మీకు అవసరమైన శుభ్రపరిచే సేవను ఎంచుకోండి.",
+  "Book Your Time":
+    "మీ సమయాన్ని బుక్ చేయండి",
 
-    "Book Your Time":
-      "మీ సమయాన్ని బుక్ చేయండి",
+  "Choose a convenient date and time.":
+    "మీకు అనుకూలమైన తేదీ మరియు సమయాన్ని ఎంచుకోండి.",
 
-    "Choose a convenient date and time.":
-      "మీకు అనుకూలమైన తేదీ మరియు సమయాన్ని ఎంచుకోండి.",
+  "We Get It Done":
+    "మేమే పని పూర్తి చేస్తాము",
 
-    "We Get It Done":
-      "మేమే పని పూర్తి చేస్తాము",
+  "A trusted helper completes the work.":
+    "నమ్మకమైన సహాయకుడు పనిని పూర్తి చేస్తారు.",
 
-    "A trusted helper completes the work.":
-      "నమ్మకమైన సహాయకుడు పనిని పూర్తి చేస్తారు.",
+  "Relax and Enjoy":
+    "విశ్రాంతి తీసుకుని ఆనందించండి",
 
-    "Relax and Enjoy":
-      "విశ్రాంతి తీసుకుని ఆనందించండి",
+  "Enjoy more free time and a beautifully clean home.":
+    "ఎక్కువ ఖాళీ సమయం మరియు అందంగా శుభ్రమైన ఇంటిని ఆస్వాదించండి.",
 
-    "Enjoy more free time and a beautifully clean home.":
-      "ఎక్కువ ఖాళీ సమయం మరియు అందంగా శుభ్రమైన ఇంటిని ఆస్వాదించండి."
-  };
+  /* Comparison section */
+
+  "Why Choose Us":
+    "మమ్మల్ని ఎందుకు ఎంచుకోవాలి",
+
+  "ScrubMate vs Other Apps":
+    "ScrubMate మరియు ఇతర యాప్‌ల పోలిక",
+
+  "See the important differences before choosing a home-service app.":
+    "గృహ సేవల యాప్‌ను ఎంచుకునే ముందు ముఖ్యమైన తేడాలను చూడండి.",
+
+  "Feature":
+    "లక్షణం",
+
+  "ScrubMate":
+    "ScrubMate",
+
+  "Other Apps":
+    "ఇతర యాప్‌లు",
+
+  "English and Telugu Support":
+    "ఇంగ్లీష్ మరియు తెలుగు భాషా మద్దతు",
+
+  "Multiple Home Services":
+    "అనేక గృహ సేవలు",
+
+  "Simple Booking Process":
+    "సులభమైన బుకింగ్ విధానం",
+
+  "Flexible Date and Time":
+    "అనుకూలమైన తేదీ మరియు సమయం",
+
+  "Clear Service Information":
+    "స్పష్టమైన సేవా సమాచారం",
+
+  "Local Customer Support":
+    "స్థానిక వినియోగదారుల సహాయం",
+
+  "Varies":
+    "యాప్‌ను బట్టి మారుతుంది"
+};
 
 
   /* Select all text that needs translation */
+const translatableElements =
+  document.querySelectorAll(
+    [
+      ".intro-title",
+      ".intro-text span",
+      ".services-title",
+      ".service-name",
+      ".small-heading",
+      ".section-heading h2",
+      ".section-description",
+      ".step-card h3",
+      ".step-card p",
 
-  const translatableElements =
-    document.querySelectorAll(
-      [
-        ".intro-title",
-        ".intro-text span",
-        ".services-title",
-        ".service-name",
-        ".small-heading",
-        ".section-heading h2",
-        ".section-description",
-        ".step-card h3",
-        ".step-card p"
-      ].join(",")
-    );
-
-
+      /* Comparison section */
+      ".comparison-label",
+      ".comparison-heading",
+      ".comparison-description",
+      ".comparison-header div",
+      ".comparison-feature",
+      ".comparison-other"
+    ].join(",")
+  );
   /* Save the original English text */
 
   translatableElements.forEach((element) => {
